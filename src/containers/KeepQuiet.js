@@ -5,7 +5,9 @@ import keepQuietImg from "../Images/keepquiet.png";
 import emojiLand from "./emojiLand";
 import { DO_SOMETHING_OVER } from "../constants/action-types";
 
-const KeepQuiet = ({ appState, handleEmojiAction }) => {
+const KeepQuiet = ({ appState, handleEmojiAction, location }) => {
+  console.log('location', location)
+
   return appState === DO_SOMETHING_OVER ? (
     <Redirect push to="/excited" />
   ) : (
